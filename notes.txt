@@ -1,0 +1,57 @@
+npm i typescript -g
+npm i lite-server
+
+app.ts code compiled to Javascript app.js file
+
+Run in 2 terminals: first, npm start
+                    second, tsc --init & after that tsc fileName --watch or tsc
+                    
+To initialize tsconfig.json file: tsc --init
+
+CLASSES & INTERFACES:
+- Singleton Pattern: Ensuring that there is one instance of certain class 
+
+Interafce: Structure of an object
+
+- U can implement an interface in a class
+- U can implement multiple interfaces than inheritance which can extend only 1 class
+
+- IF WORKING WITH INTERFACES, THEN WE CAN'T USE INSTANCEOF
+
+GENERICS
+
+A generic type is a type which is kind of connected with some other type & is really flexible regarding which exact type that other type is. 
+
+DECORATORS
+
+A decorator is a function & u can find it either with a function decoration or as a function expression
+
+U can add more than 1 decorators to the same class 
+Execution of decorators happens from bottom to top
+We don't have to add all decorators directly to the class 
+
+  // VOID TELLS THE TS THAT THIS IS A FUNCTION WHICH HAS ATLEAST A BRANCH WHICH DOES NOT RETURN ANY VALUE
+  // USING VOID: BOTH POSSIBILITY EITHER RETURN NOTHING OR RETURN TUPLE
+
+
+MODULE NAMESPACES
+Namespaces can also be used to structure code into modules, allowing for better organization and maintainability of larger codebases. 
+
+WEBPACK
+Webpack is a tool that will help us bundle our files together 
+- It is a bundling & build orchestration tool
+- Its a tool that help us reduce the amount of HTTP requests by bundling code together. So that we write code split up across multiple files but webpack then takes all these files & bundles them together 
+
+- It will also optimize our code & allows us to add more build steps, more build tools
+
+
+npm i yarn
+yarn init
+yarn create react-app my-app --typescript
+
+
+NOTE: 
+  tsc app.ts => node app.js      : This will run
+  node app.ts                    : Node can also run Ts file, node doesn't matter abt the extension it runs any file with any extension with simple code 
+
+  But node is not capable of parsing & compiling Ts, using TS features it won't work but using JS it works 
